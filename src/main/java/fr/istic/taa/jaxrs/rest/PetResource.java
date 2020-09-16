@@ -19,7 +19,9 @@ public class PetResource {
   @Path("/{petId}")
   public Pet getPetById(@PathParam("petId") Long petId)  {
       // return pet
-      return new Pet();
+      Pet pet = new Pet();
+      pet.setId(5);
+      return pet;
   }
 
   @POST

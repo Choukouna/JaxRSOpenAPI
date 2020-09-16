@@ -1,0 +1,7 @@
+/home/choukouna/Documents/M2Info/TAA/Tps/Tp2JaxRS/JaxRSOpenAPI/src/main/java/fr/istic/taa/jaxrs/dao/generic/AbstractJpaDao.java
+/home/choukouna/Documents/M2Info/TAA/Tps/Tp2JaxRS/JaxRSOpenAPI/src/main/java/fr/istic/taa/jaxrs/RestServer.java
+/home/choukouna/Documents/M2Info/TAA/Tps/Tp2JaxRS/JaxRSOpenAPI/src/main/java/fr/istic/taa/jaxrs/rest/PetResource.java
+/home/choukouna/Documents/M2Info/TAA/Tps/Tp2JaxRS/JaxRSOpenAPI/src/main/java/fr/istic/taa/jaxrs/TestApplication.java
+/home/choukouna/Documents/M2Info/TAA/Tps/Tp2JaxRS/JaxRSOpenAPI/src/main/java/fr/istic/taa/jaxrs/dao/generic/EntityManagerHelper.java
+/home/choukouna/Documents/M2Info/TAA/Tps/Tp2JaxRS/JaxRSOpenAPI/src/main/java/fr/istic/taa/jaxrs/dao/generic/IGenericDao.java
+/home/choukouna/Documents/M2Info/TAA/Tps/Tp2JaxRS/JaxRSOpenAPI/src/main/java/fr/istic/taa/jaxrs/domain/Pet.java

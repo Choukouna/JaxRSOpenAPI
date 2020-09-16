@@ -1,0 +1,37 @@
+/*C1*/SET SCHEMA SYSTEM_LOBS
+INSERT INTO BLOCKS VALUES(0,2147483647,0)
+COMMIT
+/*C3*/SET SCHEMA PUBLIC
+create table Card (idCard integer not null, dateButoire timestamp, description varchar(255), libelle varchar(255), lieu varchar(255), tempsRestant integer not null, url varchar(255), etat_idSection integer, primary key (idCard))
+create table Section (idSection integer not null, libelle varchar(255), appartenance_idTab integer, primary key (idSection))
+create table Tablo (idTab integer not null, titreProjet varchar(255), primary key (idTab))
+create table User (idUser integer not null, mdp varchar(255), pseudo varchar(255), primary key (idUser))
+create table User_Card (workers_idUser integer not null, mesJobs_idCard integer not null)
+create sequence hibernate_sequence start with 1 increment by 1
+alter table Card add constraint FK9xond9tt31iva6wpbv1n5u55m foreign key (etat_idSection) references Section
+alter table Section add constraint FK6h3hoo5wa9nr9qapfsdaofx9 foreign key (appartenance_idTab) references Tablo
+alter table User_Card add constraint FK2m3yfuwqlys5s97sq0yt9h6r4 foreign key (mesJobs_idCard) references Card
+alter table User_Card add constraint FKqcxv0bj2gkv504ql6qyfiinh5 foreign key (workers_idUser) references User
+DISCONNECT
+/*C4*/SET SCHEMA PUBLIC
+INSERT INTO USER VALUES(1,'12345678','Momo')
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 2
+COMMIT
+DISCONNECT
+/*C5*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C6*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C7*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C9*/SET SCHEMA PUBLIC
+INSERT INTO USER VALUES(2,'0000','issa')
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 3
+COMMIT
+DISCONNECT
+/*C8*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C10*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C11*/SET SCHEMA PUBLIC
+DISCONNECT

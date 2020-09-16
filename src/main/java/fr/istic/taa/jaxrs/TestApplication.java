@@ -19,11 +19,16 @@ package fr.istic.taa.jaxrs;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 import fr.istic.taa.jaxrs.rest.PetResource;
+import fr.istic.taa.jaxrs.rest.SwaggerResource;
+import fr.istic.taa.jaxrs.rest.UserResource;
+import fr.istic.taa.jaxrs.rest.CardResource;
 import io.swagger.v3.jaxrs2.integration.resources.OpenApiResource;
 
+@ApplicationPath("/")
 public class TestApplication extends Application {
 
 
@@ -31,11 +36,17 @@ public class TestApplication extends Application {
     public Set<Class<?>> getClasses() {
 
         final Set<Class<?>> clazzes = new HashSet<Class<?>>();
-
+        //Ressource Pet pour décrire la construction d'une api rest
         clazzes.add(PetResource.class);
+        //Ressource openapi
         clazzes.add(OpenApiResource.class);
-        
 
+        //ajout de la ressource user à l'app et de la card
+        clazzes.add(UserResource.class);
+        clazzes.add(CardResource.class);
+
+        //add swagger resource
+        clazzes.add(SwaggerResource.class);
         return clazzes;
     }
 
