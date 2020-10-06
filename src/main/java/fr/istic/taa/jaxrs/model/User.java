@@ -1,10 +1,13 @@
 package fr.istic.taa.jaxrs.model;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+@XmlRootElement
 @Entity
 public class User implements Serializable {
     private int idUser;
@@ -42,6 +45,7 @@ public class User implements Serializable {
     }
 
     @ManyToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE})
+    @XmlTransient
     public List<Card> getMesJobs() {
         return mesJobs;
     }

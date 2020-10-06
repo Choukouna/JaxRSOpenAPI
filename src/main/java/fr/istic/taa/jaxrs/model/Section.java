@@ -1,10 +1,13 @@
 package fr.istic.taa.jaxrs.model;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+@XmlRootElement
 @Entity
 public class Section implements Serializable {
 
@@ -41,6 +44,7 @@ public class Section implements Serializable {
     }
 
     @OneToMany(mappedBy = "etat")
+    @XmlTransient
     public List<Card> getMesFiches() {
         return mesFiches;
     }

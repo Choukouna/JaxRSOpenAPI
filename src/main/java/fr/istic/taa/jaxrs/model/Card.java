@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -100,8 +101,9 @@ public class Card implements Serializable {
     }
 
     @ManyToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, mappedBy="mesJobs")
-    @XmlElementWrapper(name="workers")
-    @XmlElement(name="worker")
+    //@XmlElementWrapper(name="workers")
+    //@XmlElement(name="worker")
+    @XmlTransient
     public List<User> getWorkers() {
         return workers;
     }

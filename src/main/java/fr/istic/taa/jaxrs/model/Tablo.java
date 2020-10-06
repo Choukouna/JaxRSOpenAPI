@@ -4,10 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+@XmlRootElement
 @Entity
 public class Tablo implements Serializable {
     private int idTab;
@@ -34,6 +37,7 @@ public class Tablo implements Serializable {
     }
 
     @OneToMany(mappedBy = "appartenance")
+    @XmlTransient
     public List<Section> getSections() {
         return sections;
     }

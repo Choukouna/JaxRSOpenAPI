@@ -9,10 +9,12 @@ import io.swagger.v3.oas.annotations.Parameter;
 
 @Path("/card")
 @Produces({"application/json", "application/xml"})
+
 public class CardResource {
     @GET
     @Path("/{cardId}")
     public Card getCardById(@PathParam("cardId") Integer cardId)  {
+
         return new CardDAO().findOne(cardId);
     }
 
