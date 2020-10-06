@@ -20,7 +20,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
+import javax.ws.rs.core.Application; //sample-simple
 
 import fr.istic.taa.jaxrs.rest.PetResource;
 import fr.istic.taa.jaxrs.rest.SwaggerResource;

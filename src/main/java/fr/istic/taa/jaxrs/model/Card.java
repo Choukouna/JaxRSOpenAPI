@@ -99,7 +99,7 @@ public class Card implements Serializable {
         this.etat = etat;
     }
 
-    @ManyToMany(mappedBy="mesJobs")
+    @ManyToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, mappedBy="mesJobs")
     @XmlElementWrapper(name="workers")
     @XmlElement(name="worker")
     public List<User> getWorkers() {

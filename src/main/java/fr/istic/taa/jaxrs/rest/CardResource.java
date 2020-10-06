@@ -19,7 +19,7 @@ public class CardResource {
     @POST
     @Consumes("application/json")
     public Response addCard(
-            @Parameter(description = "Pet object that needs to be added to the store", required = true) Card carte) {
+            @Parameter(description = "Card object that needs to be added to the store", required = true) Card carte) {
         new CardDAO().save(carte);
         return Response.ok().entity("SUCCESS").build();
     }
