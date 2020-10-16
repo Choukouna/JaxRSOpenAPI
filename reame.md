@@ -4,7 +4,7 @@ Compte rendu TP2
 Partie 1 : Servlet
 ===
 
-* La partie 1 du TP2 a été inclue dans le TP1 (http:://lien github) </http::> (package servlet) <br>
+* La partie 1 du TP2 a été inclue dans le TP1 (https://gitlab.istic.univ-rennes1.fr/kouattara/tp1taa.git) </http::> (package servlet) <br>
 * Pour le lancer au sein du TP1, on fait <em>mvn jetty:run</em> à la racine du TP1;
 * La servlet de test est accessible à [hello](http://localhost:8080/hello)
 * La liste des kanban [Les kanban](http://localhost:8080/c)
