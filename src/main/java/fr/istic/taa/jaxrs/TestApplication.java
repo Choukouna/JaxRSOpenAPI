@@ -30,8 +30,6 @@ import io.swagger.v3.jaxrs2.integration.resources.OpenApiResource;
 
 @ApplicationPath("/")
 public class TestApplication extends Application {
-
-
     @Override
     public Set<Class<?>> getClasses() {
 
